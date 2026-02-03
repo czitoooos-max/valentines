@@ -15,7 +15,6 @@
         #message { display: none; }
         .my-img { width: 100%; border-radius: 20px; margin-top: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
         
-        /* Styl latających serduszek */
         .heart {
             position: fixed;
             top: -10vh;
@@ -42,7 +41,8 @@
         </div>
         <div id="message">
             <h2>Wiedziałem Bąbelku! 😍❤️</h2>
-           <img src="https://share.icloud.com/photos/09eTa7ISaXPgSAmjlXm829Ddg" alt="Dla Weroniki" class="my-img">
+            <!-- Używamy bezpośredniego linku do zdjęcia z Twojego GitHuba -->
+            <img src="https://raw.githubusercontent.com" alt="Dla Weroniki" class="my-img">
         </div>
     </div>
 
@@ -60,7 +60,6 @@
         const timer = setInterval(moveNo, 450);
         btnNo.addEventListener('touchstart', (e) => { e.preventDefault(); moveNo(); });
 
-        // Funkcja tworząca pojedyncze serduszko
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
@@ -78,8 +77,6 @@
             document.getElementById('button-group').style.display = 'none';
             document.getElementById('question').style.display = 'none';
             btnNo.style.display = 'none';
-            
-            // Start deszczu serduszek
             heartInterval = setInterval(createHeart, 300);
         }
     </script>
